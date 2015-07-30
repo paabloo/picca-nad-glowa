@@ -1,0 +1,37 @@
+<!doctype html>
+<!--[if lt IE 7]>    <html lang="" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html lang="" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html lang="" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="" class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Rito App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles/css/main.css"> -->
+  </head>
+
+  <body ng-app="rito.app">
+    <!-- ui-router ui-view to be populated by scripts -->
+    <ul>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/champions">Champions</a></li>
+    </ul>
+
+    <ui-view></ui-view>
+
+    <!-- Libraries -->
+    <!-- <script type="text/javascript" src="bower_components/jquery/dist/jquery.js" ></script> -->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- Development scripts -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/controllers/homeCtrl.js"></script>
+    <script type="text/javascript" src="scripts/controllers/championsCtrl.js"></script>
+    <script type="text/javascript" src="scripts/controllers/championCtrl.js"></script>
+    <script type="text/javascript" src="scripts/factories/championsFct.js"></script>
+    <script type="text/javascript" src="scripts/services/environmentSrv.js"></script>
+    <script type="text/javascript" src="scripts/services/championsSrv.js"></script>
+  </body>
+</html>

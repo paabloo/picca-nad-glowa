@@ -1,0 +1,31 @@
+<p ng-if="CC.loading">loading...</p>
+<p>
+    <strong>{{CC.champion.name}}</strong><br>
+    <em>{{CC.champion.title}}</em>
+</p>
+<table>
+    <tr>
+        <th>HP</th>
+        <td>{{CC.champion.stats.hp}}</td>
+        <th>MP/Energy</th>
+        <td>{{CC.champion.stats.mp}}</td>
+    </tr>
+    <tr>
+        <th>HP per level</th>
+        <td>{{CC.champion.stats.hpperlevel}}</td>
+        <th>MP per level</th>
+        <td>{{CC.champion.stats.mpperlevel}}</td>
+    </tr>
+    <tr>
+        <th>Armor</th>
+        <td>{{CC.champion.stats.armor}}</td>
+        <th>Magic resist</th>
+        <td>{{CC.champion.stats.spellblock}}</td>
+    </tr>
+    <tr>
+        <th>Armor per level</th>
+        <td>{{CC.champion.stats.armorperlevel}}</td>
+        <th>Magic resist per level</th>
+        <td>{{CC.champion.stats.spellblockperlevel}}</td>
+    </tr>
+</table>
