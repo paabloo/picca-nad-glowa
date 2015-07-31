@@ -3,36 +3,6 @@ module.exports = function (grunt) {
     require('jit-grunt')(grunt);
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // shell: {
-        //     guider: {
-        //         command: 'kss-node app/styles/sass/ styleguide --template documentation/kss-template --destination documentation/styleguide'
-        //     }
-        // },
-        kss: {
-            options: {
-                includeType: 'sass',
-                sass: 'app/styles/sass',
-                template: 'documentation/kss-template'
-            },
-            dist: {
-                files: {
-                    'documentation/styleguide': ['app/styles/sass']
-                }
-            }
-        },
-        // copy: {
-        //     dev: {
-        //         files: [
-        //             // copy images
-        //             {
-        //                 expand: true,
-        //                 cwd: 'src',
-        //                 src: ['img/**'],
-        //                 dest: 'static/'
-        //             },
-        //         ]
-        //     }
-        // },
         watch: {
             // sass compilation
             sass: {
@@ -70,17 +40,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        // uglify: {
-        //     all: {
-        //         files: {
-        //             'static/js/app.min.js': [
-        //                 'node_modules/jquery/dist/jquery.js',
-        //                 'src/js/plugins.js',
-        //                 'src/js/main.js'
-        //             ]
-        //         }
-        //     }
-        // },
         connect: {
             server: {
                 options: {
@@ -105,19 +64,12 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        // autoprefixer: {
-        //     dist: {
-        //         files: {
-        //             'static/css/main.css': 'static/css/main.css'
-        //         }
-        //     }
-        // }
     });
     // Load the plugin
     // require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
     // Default task(s).
-    grunt.registerTask('default', ['sass', 'watch']);
-    // grunt.registerTask('default', ['sass', 'connect:server', 'watch']);
+    // grunt.registerTask('default', ['sass', 'watch']);
+    grunt.registerTask('default', ['sass', 'connect:server', 'watch']);
     // grunt.registerTask('default', ['sass', 'connect:server', 'copy:dev', 'watch']);
     // SASSS/Compass compilation only
     grunt.registerTask('compile', ['sass']);

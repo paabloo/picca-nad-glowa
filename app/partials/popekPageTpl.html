@@ -1,0 +1,33 @@
+<form class="form-pizzas">
+    <fieldset>
+        <div class="field">
+            <label for="people_count">Ilość mordeczek: </label>
+            <input type="number" name="people_count" id="people_count" min="1" ng-model="people_count">
+        </div>
+        <div class="field">
+            <select ng-model="choosen_pizza">
+                <option ng-repeat="picca in picce" ng-value="{{$index}}">{{picca.name}}</option>
+            </select>
+            <span>Cena: <strong>{{actualPrice}} dolarów albańskich</strong></span>
+        </div>
+        <div class="field">
+            <label>Rozmiar:</label>
+            <select ng-model="pizza_size">
+                <option value="small">Mała</option>
+                <option value="medium">Średnia</option>
+                <option value="big">Duża</option>
+            </select>
+        </div>
+    </fieldset>
+</form>
+
+<table class="result-table rwd-table">
+    <tr>
+        <th>Ilość piccuf: </th>
+        <td><strong>{{pizza_counted}}</strong></td>
+    </tr>
+    <tr>
+        <tH>Cena końcowa: </th>
+        <td><strong>{{total_price}}</strong></td>
+    </tr>
+</table>

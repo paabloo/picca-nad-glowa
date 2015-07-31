@@ -1,0 +1,31 @@
+{
+    "pizzas": [
+        {
+            "id": 1,
+            "name": "Albańska",
+            "prices": {
+                "small": 18,
+                "medium": 25,
+                "big": 34
+            }
+        },
+        {
+            "id": 2,
+            "name": "Pizza Popuś",
+            "prices": {
+                "small": 30,
+                "medium": 38,
+                "big": 47
+            }
+        },
+        {
+            "id": 3,
+            "name": "Pizza dla Prawdziwych Dam",
+            "prices": {
+                "small": 16,
+                "medium": 26,
+                "big": 32
+            }
+        }
+    ]
+}

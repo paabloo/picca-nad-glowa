@@ -2,11 +2,11 @@
 
 /* First login controller responsible for searching sources */
 
-ritoApp.controller('HomeController', [
-  function () {
+piccaApp.controller('HomeController', [
+  '$scope',
+  '$rootScope',
+  function ($scope, $rootScope) {
 
-    var self = this;
-
-    self.home = "home";
-
+    $scope.home = "domowy";
+    $rootScope.page = "home";
 }])

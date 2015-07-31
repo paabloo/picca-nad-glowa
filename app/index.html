@@ -5,33 +5,31 @@
 <!--[if gt IE 8]><!--> <html lang="" class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <title>Rito App</title>
+    <title>Picca Nad Głową</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <!-- <link rel="stylesheet" href="styles/css/main.css"> -->
+    <link rel="stylesheet" href="styles/css/main.css">
   </head>
 
-  <body ng-app="rito.app">
-    <!-- ui-router ui-view to be populated by scripts -->
-    <ul>
-        <li><a href="#/">Home</a></li>
-        <li><a href="#/champions">Champions</a></li>
-    </ul>
+  <body ng-app="picca.app">
+    <div id="cssmenu">
+        <ul class="main-menu">
+            <li class="item" ng-class="{active: page == 'home'}"><a class="item__link" href="#/">Picca Home</a></li>
+            <li class="item" ng-class="{active: page == 'popek'}"><a class="item__link" href="#/licz_popek">Popuś, licz picce</a></li>
+        </ul>
+    </div>
 
-    <ui-view></ui-view>
+    <div ng-view></div>
 
     <!-- Libraries -->
-    <!-- <script type="text/javascript" src="bower_components/jquery/dist/jquery.js" ></script> -->
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
 
     <!-- Development scripts -->
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/controllers/homeCtrl.js"></script>
-    <script type="text/javascript" src="scripts/controllers/championsCtrl.js"></script>
-    <script type="text/javascript" src="scripts/controllers/championCtrl.js"></script>
-    <script type="text/javascript" src="scripts/factories/championsFct.js"></script>
-    <script type="text/javascript" src="scripts/services/environmentSrv.js"></script>
-    <script type="text/javascript" src="scripts/services/championsSrv.js"></script>
+    <script type="text/javascript" src="scripts/controllers/popekCtrl.js"></script>
+    <script type="text/javascript" src="scripts/factories/pizzaFct.js"></script>
+    <script type="text/javascript" src="scripts/services/pizzaSrv.js"></script>
   </body>
 </html>
