@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="styles/css/main.css">
   </head>
 
-  <body ng-app="picca.app">
+  <body>
     <div id="cssmenu">
         <ul class="main-menu">
-            <li class="item" ng-class="{active: page == 'home'}"><a class="item__link" href="#/">Picca Home</a></li>
-            <li class="item" ng-class="{active: page == 'popek'}"><a class="item__link" href="#/licz_popek">Popuś, licz picce</a></li>
+            <!-- add ngClass for active item -->
+            <li class="item"><a class="item__link" href="">Picca Home</a></li>
+            <li class="item"><a class="item__link" href="">Popuś, licz picce</a></li>
         </ul>
     </div>
 
@@ -26,10 +27,5 @@
     <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
 
     <!-- Development scripts -->
-    <script type="text/javascript" src="scripts/app.js"></script>
-    <script type="text/javascript" src="scripts/controllers/homeCtrl.js"></script>
-    <script type="text/javascript" src="scripts/controllers/popekCtrl.js"></script>
-    <script type="text/javascript" src="scripts/factories/pizzaFct.js"></script>
-    <script type="text/javascript" src="scripts/services/pizzaSrv.js"></script>
   </body>
 </html>
